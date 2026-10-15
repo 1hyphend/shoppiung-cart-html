@@ -1,4 +1,4 @@
-/* We will be creating a project that allows users to browse items and add
+/* /* We will be creating a project that allows users to browse items and add
 them to a shopping cart. You may use any theme you want. This project will
 be revisited several times (adding UI layer, advanced sorting methods) so
 pick something you’re happy with. We will
@@ -13,70 +13,115 @@ Shopping cart with add/remove buttons and total order price */
 
 /* 
 THEME: Space stuff  */
-function shopping[
-    const items = 
+
+
+/* $1 = 10000000000000 USD */
+function superduperluxurious_elonhusky_store(items){
+    const items = [
     {
         name: "asteriod",
-        price: "$40",
+        price: "$8",
         quality: "pristine",
-        size: "small",
+        weight: "small",
         ability: "none"
+    },
     {
         name: "star",
-        price: "tuehundread dollas",
+        price: "350",
         quality: "shiny",
-        size: "tiny",
+        weight: "tiny",
         ability: "grants a wish"
+    },
     {
-        name: "",
+        name: "Mercury",
+        price: "3000",
+        quality: "",
+        weight: "",
+        ability: "",
+    },
+    {
+        name: "Earth",
+        price: "500",
+        quality: "",
+        weight: "",
+        ability: "",
+    },
+    {
+        name: "Mars",
         price: "",
         quality: "",
-        size: "",
+        weight: "",
         ability: "",
-    }
+    },
     {
-        name: "",
+        name: "Jupiter",
         price: "",
         quality: "",
-        size: "",
+        weight: "",
         ability: "",
-    }
+    },
     {
-        name: "",
+        name: "Saturn",
         price: "",
         quality: "",
-        size: "",
+        weight: "",
         ability: "",
-    }
+    },
     {
-        name: "",
+        name: "Uranus",
         price: "",
         quality: "",
-        size: "",
+        weight: "",
         ability: "",
-    }
+    },
     {
-        name: "",
+        name: "Neptune",
         price: "",
         quality: "",
-        size: "",
+        weight: "",
         ability: "",
-    }
-    {
-        name: "",
-        price: "",
-        quality: "",
-        size: "",
-        ability: "",
-    }
-    {
-        name: "",
-        price: "",
-        quality: "",
-        size: "",
-        ability: "",
-    }
-
-    }
-    };
+    },
+    
 ]
+}
+let items = ['asteriod', 'star' ] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* function multipleChoice(n, correct, response){
+    grade = 0
+    for(let i = 0; i <correct.length; i++){
+        if(correct[i] === response[i]){
+            grade++;
+        }
+    }
+    return grade;
+}
+
+multipleChoice(3,"CAB","BCE");
+
+
+
+function notCovid(n, rate, target) {
+    let day = 0;
+    let infected = 0;
+    while(infected<= target) {
+        day++;
+        infected = infected + infected * rate;
+    }
+    return (infected);
+    }
+} */
