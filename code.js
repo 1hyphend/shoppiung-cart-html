@@ -14,131 +14,193 @@ Shopping cart with add/remove buttons and total order price */
 /* 
 THEME: Schools  */
 
-function superduperluxurious_elonhusky_store(items){
-    const items = [
+function SuperDuperLuxuriousElonHuskyStore(items){
+
+const items = [
     {
-        name: "Albany State University",
-        price: "100",
+        name: "",
+        price: "",
         ranking: "",
-        students:""
+        students:"",
+        location:"",
+        type: ""
 
     },
-    {
+        {
         name: "",
         price: "",
         ranking: "",
         students:"",
-
-    },
-    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
 
     },    {
         name: "",
         price: "",
         ranking: "",
         students:"",
+        location:"",
+        type: ""
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+        location:"",
+        type: ""
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+        location:"",
+        type: ""
 
     },
 
 ]
 }
-let items = ['asteriod', 'star' ] 
 
-
+	Massachusetts Institute of Technology	Cambridge
+2	Harvard University	Cambridge
+3	Stanford University	Stanford
+4	Cornell University	Ithaca
+5	University of California, Berkeley	Berkeley
+6	University of Michigan	Ann Arbor
+7	Columbia University in the City of New York	New York City
+8	University of Washington	Seattle
+9	University of Pennsylvania	Philadelphia
+10	Yale University	New Haven
+11	University of California, Los Angeles	Los Angeles
+12	The University of Texas at Austin	Austin
+13	University of Wisconsin-Madison	Madison
+14	University of Minnesota Twin Cities	Minneapolis
+15	Purdue University	West Lafayette
+16	Princeton University	Princeton
+17	University of Chicago	Chicago
+18	New York University
 
 
 
