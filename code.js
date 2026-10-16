@@ -12,76 +12,128 @@ All items shown and filtered on screen
 Shopping cart with add/remove buttons and total order price */
 
 /* 
-THEME: Space stuff  */
+THEME: Schools  */
 
-
-/* $1 = 10000000000000 USD */
 function superduperluxurious_elonhusky_store(items){
     const items = [
     {
-        name: "asteriod",
-        price: "$8",
-        quality: "pristine",
-        weight: "small",
-        ability: "none"
+        name: "Albany State University",
+        price: "100",
+        ranking: "",
+        students:""
+
     },
     {
-        name: "star",
-        price: "350",
-        quality: "shiny",
-        weight: "tiny",
-        ability: "grants a wish"
-    },
-    {
-        name: "Mercury",
-        price: "3000",
-        quality: "",
-        weight: "",
-        ability: "",
-    },
-    {
-        name: "Earth",
-        price: "500",
-        quality: "",
-        weight: "",
-        ability: "",
-    },
-    {
-        name: "Mars",
+        name: "",
         price: "",
-        quality: "",
-        weight: "",
-        ability: "",
+        ranking: "",
+        students:"",
+
     },
     {
-        name: "Jupiter",
+        name: "",
         price: "",
-        quality: "",
-        weight: "",
-        ability: "",
-    },
-    {
-        name: "Saturn",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
         price: "",
-        quality: "",
-        weight: "",
-        ability: "",
-    },
-    {
-        name: "Uranus",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
         price: "",
-        quality: "",
-        weight: "",
-        ability: "",
-    },
-    {
-        name: "Neptune",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
         price: "",
-        quality: "",
-        weight: "",
-        ability: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
+    },    {
+        name: "",
+        price: "",
+        ranking: "",
+        students:"",
+
     },
-    
+
 ]
 }
 let items = ['asteriod', 'star' ] 
