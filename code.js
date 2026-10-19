@@ -14,193 +14,194 @@ Shopping cart with add/remove buttons and total order price */
 /* 
 THEME: Schools  */
 
-function SuperDuperLuxuriousElonHuskyStore(items){
 
-const items = [
-    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },
+function SuperDuperLuxuriousElonHuskyStore() {
+    const items = [
         {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
+            name: "MIT",
+            tuition: 67140,
+            students: 12000,
+            location: "Cambridge",
+            type: "Private"
+        },
+        {
+            name: "Harvard",
+            tuition: 68440,
+            students: 25000,
+            location: "Cambridge",
+            type: "Ivy"
+        },
+        {
+            name: "Stanford",
+            tuition: 68570,
+            students: 7346,
+            location: "Stanford",
+            type: "Private"
+        },
+        {
+            name: "Cornell",
+            tuition: 71000,
+            students: 26000,
+            location: "Ithaca",
+            type: "Ivy"
+        },
+        {
+            name: "UCBerkeley",
+            tuition: 57000,
+            students: 46000,
+            location: "Berkeley",
+            type: "Public"
+        },
+        {
+            name: "Princeton",
+            tuition: 68450,
+            students: 9200,
+            location: "Princeton",
+            type: "Ivy"
+        },
+        {
+            name: "Columbia",
+            tuition: 71845,
+            students: 35000,
+            location: "NYC",
+            type: "Ivy"
+        },
+        {
+            name: "Caltech",
+            tuition: 71230,
+            students: 13600,
+            location: "Pasadena",
+            type: "Private"
+        },
+        {
+            name: "UPENN",
+            tuition: 73980,
+            students: 29000,
+            location: "Philadelphia",
+            type: "Ivy"
+        },
+        {
+            name: "Yale",
+            tuition: 72500,
+            students: 15000,
+            location: "New Haven",
+            type: "Ivy"
+        },
+        {
+            name: "DukeUNI",
+            tuition: 76350,
+            students: 18000,
+            location: "Durham",
+            type: "Private"
+        },
+        {
+            name: "JohnHopkinsUNI",
+            tuition: 69170,
+            students: 33000,
+            location: "Baltimore",
+            type: "Private"
+        },
+        {
+            name: "ChicagoUNI",
+            tuition: 71850,
+            students: 19000,
+            location: "Chicago",
+            type: "Private"
+        },
+        {
+            name: "NorthWestUNI",
+            tuition: 73060,
+            students: 24000,
+            location: "Evanston",
+            type: "Private"
+        },
+        {
+            name: "Dartmouth",
+            tuition: 72390,
+            students: 7000,
+            location: "Hanover",
+            type: "Ivy"
+        },
+        {
+            name: "CarnegieMellon",
+            tuition: 65000,
+            students: 16000,
+            location: "Pittsburgh",
+            type: "Private"
+        },
+        {
+            name: "BrownUNI",
+            tuition: 71000,
+            students: 11000,
+            location: "Providence",
+            type: "Ivy"
+        },
+        {
+            name: "RiceUNI",
+            tuition: 63000,
+            students: 9000,
+            location: "Houston",
+            type: "Private"
+        },
+        {
+            name: "VanderbiltUNI",
+            tuition: 67000,
+            students: 14000,
+            location: "Nashville",
+            type: "Private"
+        },
+        {
+            name: "UCLA",
+            tuition: 56000,
+            students: 49000,
+            location: "Los Angeles",
+            type: "Public"
+        },
+        {
+            name: "NotreDame",
+            tuition: 67000,
+            students: 13000,
+            location: "Notre Dame",
+            type: "Private"
+        },
+        {
+            name: "UVA",
+            tuition: 65220,
+            students: 27000,
+            location: "Charlottesville",
+            type: "Public"
+        },
+        {
+            name: "UNC",
+            tuition: 49600,
+            students: 32000,
+            location: "Chapel Hill",
+            type: "Public"
+        },
+        {
+            name: "GeorgiaTech",
+            tuition: 36120,
+            students: 53000,
+            location: "Atlanta",
+            type: "Public"
+        }
+    ];
 
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
 
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },    {
-        name: "",
-        price: "",
-        ranking: "",
-        students:"",
-        location:"",
-        type: ""
-
-    },
-
-]
+    return items;
 }
 
-	Massachusetts Institute of Technology	Cambridge
-2	Harvard University	Cambridge
-3	Stanford University	Stanford
-4	Cornell University	Ithaca
-5	University of California, Berkeley	Berkeley
-6	University of Michigan	Ann Arbor
-7	Columbia University in the City of New York	New York City
-8	University of Washington	Seattle
-9	University of Pennsylvania	Philadelphia
-10	Yale University	New Haven
-11	University of California, Los Angeles	Los Angeles
-12	The University of Texas at Austin	Austin
-13	University of Wisconsin-Madison	Madison
-14	University of Minnesota Twin Cities	Minneapolis
-15	Purdue University	West Lafayette
-16	Princeton University	Princeton
-17	University of Chicago	Chicago
-18	New York University
+
+const universities = SuperDuperLuxuriousElonHuskyStore();
+console.log(universities[0].name);
+console.log(universities[0].location);
+
+
+
+
+
+
+
 
 
 
