@@ -23,7 +23,7 @@ function SuperDuperLuxuriousElonHuskyStore() {
             students: 12000,
             location: "Cambridge",
             type: "Private"
-        },
+        }, //https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUGfOevxFXhb0g1zGKIzTGZXtG-WGF7pzt0TPU6SgUVQ&s=10
         {
             name: "Harvard",
             tuition: 68440,
@@ -193,7 +193,7 @@ function SuperDuperLuxuriousElonHuskyStore() {
 
 
 const universities = SuperDuperLuxuriousElonHuskyStore();
-console.log(universities[0].name);
+console.log (universities(1));
 console.log(universities[0].location);
 
 
