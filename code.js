@@ -207,6 +207,7 @@ function addToCart(item) {
 }
 addToCart({ name: "MIT", price: 67140});
 console.log(cart); 
+console.log("your total is:")
 
 
 
