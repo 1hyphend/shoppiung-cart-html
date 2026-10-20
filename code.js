@@ -191,14 +191,22 @@ function SuperDuperLuxuriousElonHuskyStore() {
     return items;
 }
 
-
 const universities = SuperDuperLuxuriousElonHuskyStore();
-console.log (universities(1));
+console.log (universities[0].name)
 console.log(universities[0].location);
 
 
+/* cart["university"] = { shoes: { name: "Shoes", price: 80, qty: 1}};
 
-
+function addToCart(item) {
+    if(cart[item.name]) {
+        cart[item.name].qty++;
+    } else {
+        cart[item.name] = item;
+    }
+}
+addToCart({ name: "Shoes", price: 80, aty: 1 });
+console.log(cart); */
 
 
 
