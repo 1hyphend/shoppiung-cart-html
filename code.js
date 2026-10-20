@@ -196,7 +196,7 @@ console.log (universities[0].name)
 console.log(universities[0].location);
 
 
-/* cart["university"] = { shoes: { name: "Shoes", price: 80, qty: 1}};
+const cart = { MIT: { name: "MIT", price: 67140, qty: 0} };
 
 function addToCart(item) {
     if(cart[item.name]) {
@@ -205,8 +205,8 @@ function addToCart(item) {
         cart[item.name] = item;
     }
 }
-addToCart({ name: "Shoes", price: 80, aty: 1 });
-console.log(cart); */
+addToCart({ name: "MIT", price: 67140});
+console.log(cart); 
 
 
 
