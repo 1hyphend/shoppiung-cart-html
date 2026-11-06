@@ -210,7 +210,9 @@ console.log(cart);
 console.log("your total is:")
 
 
-
+.push 
+.pull
+.find
 
 
 
