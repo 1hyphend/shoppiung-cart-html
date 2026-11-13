@@ -198,6 +198,8 @@ console.log(universities[0].location);
 
 const cart = { MIT: { name: "MIT", price: 67140, qty: 0} };
 
+
+
 function addToCart(item) {
     if(cart[item.name]) {
         cart[item.name].qty++;
