@@ -211,11 +211,18 @@ addToCart({ name: "MIT", price: 67140});
 console.log(cart); 
 console.log("your total is:")
 
+function filterSchools(type) {
+    if (type === "Ivy") {
+        return universities;
+    }
+    const filteredSchools = universities.filter(function(item) {
+        return item.type === type;
+    });
+    return filteredSchools;
+    }
 
-.push 
-.pull
-.find
-
+    console.log("Ivy League:")
+    console.log(filterSchools("Ivy"));
 /* const box = document.querySelector(".box");
 box.style.backgroundColor = "red";
 const header = document.getElementById("color");
