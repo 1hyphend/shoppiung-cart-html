@@ -1,16 +1,3 @@
-/* /* We will be creating a project that allows users to browse items and add
-them to a shopping cart. You may use any theme you want. This project will
-be revisited several times (adding UI layer, advanced sorting methods) so
-pick something you’re happy with. We will
-Create a list of at least 20 items to sell
-Filter what products are shown with button clicks (clicks added later!)
-Allow users to add to a cart
-Remove Items from cart
-Provide users a total for their purchase
-*Later
-All items shown and filtered on screen
-Shopping cart with add/remove buttons and total order price */
-
 /* 
 THEME: Schools  */
 
@@ -192,27 +179,10 @@ function SuperDuperLuxuriousElonHuskyStore() {
 }
 
 const universities = SuperDuperLuxuriousElonHuskyStore();
-console.log (universities[0].name)
-console.log(universities[0].location);
 
-
-const cart = { MIT: { name: "MIT", price: 67140, qty: 0} };
-
-
-
-function addToCart(item) {
-    if(cart[item.name]) {
-        cart[item.name].qty++;
-    } else {
-        cart[item.name] = item;
-    }
-}
-addToCart({ name: "MIT", price: 67140});
-console.log(cart); 
-console.log("your total is:")
-
+const cart = [];
 function filterSchools(type) {
-    if (type === "Ivy") {
+    if (type === "All") {
         return universities;
     }
     const filteredSchools = universities.filter(function(item) {
@@ -223,6 +193,29 @@ function filterSchools(type) {
 
     console.log("Ivy League:")
     console.log(filterSchools("Ivy"));
+
+
+function AddToCart(item) {
+
+const CurrentItems = cart.find(function(CartItems) {
+    return CartItems.name === item.name;
+});
+
+if (CurrentItems) {
+    CurrentItems.qty++;
+}
+else {
+    cart.push({
+        name: item.name,
+        price: item.tuition,
+        qty: 1
+    });
+}
+    console.log(item.name);
+}
+
+
+
 /* const box = document.querySelector(".box");
 box.style.backgroundColor = "red";
 const header = document.getElementById("color");
@@ -253,18 +246,6 @@ btn.addEventListener("click", function () {
   x++;
   rgb();
 }); */
-
-
-
-
-
-
-
-
-
-
-
-
 /* function multipleChoice(n, correct, response){
     grade = 0
     for(let i = 0; i <correct.length; i++){
