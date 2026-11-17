@@ -214,7 +214,9 @@ else {
     console.log(item.name);
 }
 
-
+function TotalCost(price) {
+    
+}
 
 /* const box = document.querySelector(".box");
 box.style.backgroundColor = "red";
