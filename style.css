@@ -15,7 +15,7 @@ body {
         radial-gradient(ellipse at 82% 72%, rgba(79, 145, 220, 0.62), transparent 42%),
         linear-gradient(135deg, #252b58 0%, #65427f 52%, #283f70 100%);
     background-attachment: fixed;
-    font-family: Arial, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(0, 0, 0);
 }
 .card {
@@ -27,17 +27,18 @@ body {
 }
 .font {
     font-size: 1rem;
+    font-family:monospace
 }
 .cards {
     background-color: purple;
     width:23%;
-    margin: 1rem auto;
+    margin: 3rem auto;
     padding: 0.0001rem;
     border-radius: 101222rem;
     font-size: 0.5rem;
 }
 .project-title {
-    font-family: 'Creepster', cursive;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 4rem;
     text-align: center;
 }
