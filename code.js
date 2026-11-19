@@ -215,8 +215,19 @@ else {
 }
 
 function TotalCost(price) {
-    
+    const PriceToPay= cart.find(function(PriceToPay){ 
+    return PriceToPay.name === price.name;
+    });
 }
+document.querySelector("form").addEventListener("submit", function
+    (event) {
+        event.preventDeafault();
+        let x = document.querySelector("#coupon").value;
+        console.log(x);
+        x.textContent = "";
+        x.value = "";
+    }
+)
 
 /* const box = document.querySelector(".box");
 box.style.backgroundColor = "red";

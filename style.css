@@ -18,10 +18,11 @@ body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(0, 0, 0);
 }
+
 .card {
     background-color: #e5caff;
     width: 80%;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -29,6 +30,7 @@ body {
     font-size: 1rem;
     font-family:monospace
 }
+
 .cards {
     background-color: purple;
     width:23%;
@@ -73,12 +75,27 @@ body {
 
 .container > .card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 200px;
+    grid-template-columns: minmax(0, 1fr) 100px;
     grid-template-rows: repeat(9, 1.8rem);
-    column-gap: 2rem;
+    column-gap: 1rem;
     align-items: start;
     align-content: start;
     min-height: 18.2rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: 95%;
+    max-width: 1800px;
+    margin: 2rem auto;
+}
+
+.container > .card {
+    width: 100%;
+    margin: 0;
+    padding: 1.25rem;
 }
 
 .container > .card h2 {
