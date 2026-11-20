@@ -214,15 +214,7 @@ else {
     console.log(item.name);
 }
 
-function TotalCost(price) {
-    const Money = cart.find(function(Money){ 
-    return Money.name === price.name;
-    });
-    
-if (TotalCost) {
-    TotalCost.qty++;
-}
-}
+
 document.querySelector("form").addEventListener("submit", function
     (event) {
         event.preventDeafault();
