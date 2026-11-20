@@ -215,9 +215,13 @@ else {
 }
 
 function TotalCost(price) {
-    const PriceToPay= cart.find(function(PriceToPay){ 
-    return PriceToPay.name === price.name;
+    const Money = cart.find(function(Money){ 
+    return Money.name === price.name;
     });
+    
+if (TotalCost) {
+    TotalCost.qty++;
+}
 }
 document.querySelector("form").addEventListener("submit", function
     (event) {
