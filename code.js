@@ -215,37 +215,7 @@ else {
 }
 
 
-const totalDisplay = document.querySelector("#cart-total");
 
-document.querySelectorAll(".container > .card").forEach(function (card) {
-    const details = Array.from(card.querySelectorAll(":scope > a"));
-    const nameLine = details.find(function (detail) {
-        return detail.textContent.trim().startsWith("Name:");
-    });
-    const priceLine = details.find(function (detail) {
-        return detail.textContent.trim().startsWith("Price:");
-    });
-    const button = card.querySelector(".butn");
-
-    if (!nameLine || !priceLine || !button) {
-        throw new Error("A school card is missing its name, price, or buy button.");
-    }
-
-    const name = nameLine.textContent.split(":").slice(1).join(":").trim();
-    const tuition = Number(priceLine.textContent.replace(/[^\d]/g, ""));
-
-    if (!Number.isFinite(tuition)) {
-        throw new Error("The price for " + name + " is invalid.");
-    }
-
-    button.addEventListener("click", function () {
-        AddToCart({ name: name, tuition: tuition });
-        const total = cart.reduce(function (sum, item) {
-            return sum + item.price * item.qty;
-        }, 0);
-        totalDisplay.textContent = "$" + total.toLocaleString();
-    });
-});
 
 
 //ok today we needs to make la button for filtering, then we need to make a total function.
