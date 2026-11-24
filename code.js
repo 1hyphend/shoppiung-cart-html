@@ -237,7 +237,13 @@ document.querySelectorAll(".container > .card").forEach(function (card) {
     if (!Number.isFinite(tuition)) {
         throw new Error("The price for " + name + " is invalid.");
     }
+function calculateTotal() {
+    const total = cart.reduce(function(sum, item) {
+        return sum + (item.price * item.qty);
+    }, 0);
 
+    return total;
+}
     button.addEventListener("click", function () {
         AddToCart({ name: name, tuition: tuition });
         const total = cart.reduce(function (sum, item) {
