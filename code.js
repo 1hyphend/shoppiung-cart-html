@@ -181,6 +181,7 @@ function SuperDuperLuxuriousElonHuskyStore() {
 const universities = SuperDuperLuxuriousElonHuskyStore();
 
 const cart = [];
+
 function filterSchools(type) {
     if (type === "All") {
         return universities;
@@ -214,6 +215,31 @@ else {
     console.log(item.name);
 }
 
+function calculateTotal() {
+    return cart.reduce(function (sum, item) {
+        return sum + item.price * item.qty;
+    }, 0);
+}
+
+
+
+
+
+const totalDisplay = document.querySelector("cart-total");
+
+
+document.querySelectorAll(".container > .card").forEach(card => {
+    const links = card.querySelectorAll(":scope > a");
+    const name = links[1].textContent.replace("Name:", "").trim();
+    const tuition = Number(links[5].textContent.replace(/\D/g, ""));
+
+    card.querySelector(".butn").addEventListener("click", () => {
+        AddToCart({ name, tuition });
+        const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+        totalDisplay.textContent = `$${total.toLocaleString()}`;
+    });
+});
+
 
 
 document.querySelectorAll(".container > .card").forEach(function (card) {
@@ -242,12 +268,6 @@ document.querySelectorAll(".container > .card").forEach(function (card) {
         totalDisplay.textContent = "$" + calculateTotal().toLocaleString();
     });
 });
-
-function calculateTotal() {
-    return cart.reduce(function (sum, item) {
-        return sum + item.price * item.qty;
-    }, 0);
-}
 
 
 //ok today we needs to make la button for filtering, then we need to make a total function.
