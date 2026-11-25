@@ -80,6 +80,11 @@ body {
     font-weight: 700;
 }
 
+#cart-items {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 .btn {
     display: inline-block;
     background-color:
@@ -100,6 +105,11 @@ body {
     font: inherit;
     text-decoration: none;
     cursor: pointer;
+}
+
+.butn[aria-disabled="true"] {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .container .cards {

@@ -181,28 +181,46 @@ function SuperDuperLuxuriousElonHuskyStore() {
 const universities = SuperDuperLuxuriousElonHuskyStore();
 
 const cart = [];
-const cartItemsDisplay = document.querySelector("#cart-items");
-const totalDisplay = document.querySelector("#cart-total");
-function AddToCart(item) {
-    const CurrentItems = cart.find(function(CartItems) {
-        return CartItems.name === item.name;
-    });
 
-    if (CurrentItems) {
-        CurrentItems.qty++;
-    } else {
-        cart.push({
-            name: item.name,
-            price: item.tuition,
-            qty: 1
-        });
+function filterSchools(type) {
+    if (type === "All") {
+        return universities;
     }
-    return cart;
+    const filteredSchools = universities.filter(function(item) {
+        return item.type === type;
+    });
+    return filteredSchools;
+    }
+
+    console.log("Ivy League:")
+    console.log(filterSchools("Ivy"));
+
+
+function AddToCart(item) {
+
+const CurrentItems = cart.find(function(CartItems) {
+    return CartItems.name === item.name;
+});
+
+if (CurrentItems) {
+    if (CurrentItems.qty >= item.stock) {
+        return false;
+    }
+    CurrentItems.qty++;
 }
-function calculateTotal() {
-    return cart.reduce(function(sum, item) {
-        return sum + item.price * item.qty;
-    }, 0);
+else {
+    if (item.stock <= 0) {
+        return false;
+    }
+    cart.push({
+        name: item.name,    
+        price: item.tuition,    
+        qty: 1,
+        stock: item.stock
+    });
+}
+    console.log(item.name);
+    return true;
 }
 
 function calculateTotal() {
@@ -210,7 +228,6 @@ function calculateTotal() {
         return sum + item.price * item.qty;
     }, 0);
 }
-
 function removeFromCart(name) {
     const index = cart.findIndex(function(item) {
         return item.name === name;
@@ -222,32 +239,27 @@ function removeFromCart(name) {
 
     return cart;
 }
+const totalDisplay = document.querySelector("#cart-total");
+const cartItemsDisplay = document.querySelector("#cart-items");
 
+document.querySelectorAll(".container > .card").forEach(card => {
+    const links = card.querySelectorAll(":scope > a");
+    const name = links[1].textContent.replace("Name:", "").trim();
+    const tuition = Number(links[5].textContent.replace(/\D/g, ""));
+    const stock = Number(links[6].textContent.replace(/\D/g, ""));
+    const buyButton = card.querySelector(".butn");
 
-document.querySelectorAll(".container > .card").forEach(function (card) {
-    const details = Array.from(card.querySelectorAll(":scope > a"));
-    const nameLine = details.find(function (detail) {
-        return detail.textContent.trim().startsWith("Name:");
-    });
-    const priceLine = details.find(function (detail) {
-        return detail.textContent.trim().startsWith("Price:");
-    });
-    const button = card.querySelector(".butn");
-
-    if (!nameLine || !priceLine || !button) {
-        throw new Error("A school card is missing its name, price, or buy button.");
-    }
-
-    const name = nameLine.textContent.split(":").slice(1).join(":").trim();
-    const tuition = Number(priceLine.textContent.replace(/[^\d]/g, ""));
-
-    if (!Number.isFinite(tuition)) {
-        throw new Error("The price for " + name + " is invalid.");
-    }
-
-    button.addEventListener("click", function () {
-        AddToCart({ name: name, tuition: tuition });
+    buyButton.addEventListener("click", () => {
+        AddToCart({ name, tuition, stock });
+        const cartItem = cart.find(item => item.name === name);
+        if (cartItem && cartItem.qty >= stock) {
+            buyButton.setAttribute("aria-disabled", "true");
+            buyButton.textContent = "Stock limit reached";
+        }
         totalDisplay.textContent = "$" + calculateTotal().toLocaleString();
+        cartItemsDisplay.textContent = "Schools: " + cart
+            .map(item => `${item.name} x ${item.qty}`)
+            .join(", ");
     });
 });
 
