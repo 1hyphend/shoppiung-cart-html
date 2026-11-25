@@ -264,6 +264,8 @@ document.querySelectorAll(".container > .card").forEach(card => {
 });
 
 
+//fix remove
+
 //ok today we needs to make la button for filtering, then we need to make a total function.
 //lets goooooooooo        
 //add a button for purchasing 
