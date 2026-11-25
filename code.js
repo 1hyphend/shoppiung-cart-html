@@ -181,38 +181,28 @@ function SuperDuperLuxuriousElonHuskyStore() {
 const universities = SuperDuperLuxuriousElonHuskyStore();
 
 const cart = [];
-
-function filterSchools(type) {
-    if (type === "All") {
-        return universities;
-    }
-    const filteredSchools = universities.filter(function(item) {
-        return item.type === type;
-    });
-    return filteredSchools;
-    }
-
-    console.log("Ivy League:")
-    console.log(filterSchools("Ivy"));
-
-
+const cartItemsDisplay = document.querySelector("#cart-items");
+const totalDisplay = document.querySelector("#cart-total");
 function AddToCart(item) {
-
-const CurrentItems = cart.find(function(CartItems) {
-    return CartItems.name === item.name;
-});
-
-if (CurrentItems) {
-    CurrentItems.qty++;
-}
-else {
-    cart.push({
-        name: item.name,    
-        price: item.tuition,    
-        qty: 1  
+    const CurrentItems = cart.find(function(CartItems) {
+        return CartItems.name === item.name;
     });
+
+    if (CurrentItems) {
+        CurrentItems.qty++;
+    } else {
+        cart.push({
+            name: item.name,
+            price: item.tuition,
+            qty: 1
+        });
+    }
+    return cart;
 }
-    console.log(item.name);
+function calculateTotal() {
+    return cart.reduce(function(sum, item) {
+        return sum + item.price * item.qty;
+    }, 0);
 }
 
 function calculateTotal() {
@@ -221,25 +211,17 @@ function calculateTotal() {
     }, 0);
 }
 
-
-
-
-
-const totalDisplay = document.querySelector("cart-total");
-
-
-document.querySelectorAll(".container > .card").forEach(card => {
-    const links = card.querySelectorAll(":scope > a");
-    const name = links[1].textContent.replace("Name:", "").trim();
-    const tuition = Number(links[5].textContent.replace(/\D/g, ""));
-
-    card.querySelector(".butn").addEventListener("click", () => {
-        AddToCart({ name, tuition });
-        const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-        totalDisplay.textContent = `$${total.toLocaleString()}`;
+function removeFromCart(name) {
+    const index = cart.findIndex(function(item) {
+        return item.name === name;
     });
-});
 
+    if (index !== -1) {
+        cart.splice(index, 1);
+    }
+
+    return cart;
+}
 
 
 document.querySelectorAll(".container > .card").forEach(function (card) {
